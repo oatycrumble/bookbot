@@ -3,15 +3,15 @@ def get_num_words(text):
     return len(words)
 
 def get_chars_dict(text):
-    chars = {}
-    string = str.lower(text)
-    for c in string:
+    chars_dict = {}
+    chars_lowered = str.lower(text)
+    for c in chars_lowered:
         if c.isalpha():
-            if c in chars:
-                chars[c] += 1
+            if c in chars_dict:
+                chars_dict[c] += 1
             else:
-                chars[c] = 1
-    return chars
+                chars_dict[c] = 1
+    return chars_dict
 
 def sort_on(dict):
     return dict["count"]
